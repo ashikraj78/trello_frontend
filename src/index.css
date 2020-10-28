@@ -1,13 +1,64 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.modal {
+  position: fixed; /* Stay in place */
+  display: flex;
+  justify-content: center;
+  z-index: 1; /* Sit on top */
+  padding-top: 3rem;
+  top: 10%;
+  width: 100%; /* Full width */
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.close-button {
+  color: #000000;
+  font-size: 28px;
+  font-weight: bold;
+  position: fixed;
+  z-index: 5;
+  right: 42%;
+  top: 17%;
+}
+
+.cardModal {
+  display: flex;
+  justify-content: center;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 3rem;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.team_modal {
+  display: flex;
+  justify-content: center;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 3rem;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.5);
 }
