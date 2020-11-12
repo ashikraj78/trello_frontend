@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import VisuallyHidden from "@reach/visually-hidden";
 import { useFormik } from "formik";
+import TeamContext from "./TeamContext";
 
 function validator(values) {
   const errors = {};
@@ -10,8 +11,8 @@ function validator(values) {
   return errors;
 }
 
-export default function AddTeam({ teams, addNewTeam, close }) {
-  // console.log(teams);
+export default function AddTeam({ close }) {
+  let context = useContext(TeamContext);
   const { handleSubmit, handleChange, values, errors } = useFormik({
     initialValues: {
       name: "",
@@ -36,11 +37,10 @@ export default function AddTeam({ teams, addNewTeam, close }) {
     })
       .then((res) => res.json())
       .then(({ team }) => {
-        addNewTeam(team);
-        // setTeams([...teams, team]);
+        context.setTeams([...context.teams, team]);
         close();
-      });
-    // .catch((error) => context.setUser(null));
+      })
+      .catch((error) => context.setUser(null));
   }
 
   return (
@@ -127,14 +127,6 @@ export default function AddTeam({ teams, addNewTeam, close }) {
           >
             Create Team
           </button>
-
-          {/* <NavLink
-            to="/boards/board"
-            type="submit"
-            className="block w-6/12 bg-green-500 hover:bg-green-600 mt-5 py-2 px-2 rounded-md"
-          >
-            Create Team
-          </NavLink> */}
         </form>
         <img
           src="https://a.trellocdn.com/prgb/dist/images/organization/empty-board.286f8fc83e01c93ed27e.svg"

@@ -3,7 +3,7 @@ import React from "react";
 import Dialog from "@reach/dialog";
 import AddTeam from "./AddTeam";
 
-export default function BoardsLeft({ teams, addNewTeam }) {
+export default function BoardsLeft({ teams }) {
   const [showDialog, setShowDialog] = React.useState(false);
   const open = () => setShowDialog(true);
   const close = () => setShowDialog(false);
@@ -44,7 +44,7 @@ export default function BoardsLeft({ teams, addNewTeam }) {
             +
           </button>
           <Dialog isOpen={showDialog} onDismiss={close} className="team_modal">
-            <AddTeam teams={teams} addNewTeam={addNewTeam} close={close} />
+            <AddTeam close={close} />
           </Dialog>
         </div>
 

@@ -30,7 +30,9 @@ export default function AddCard({ setShowAddCard, list, setList }) {
         credentials: "include",
       },
       // body: JSON.stringify({ card: values }),
-      body: JSON.stringify({ card: { ...values, list: list._id } }),
+      body: JSON.stringify({
+        card: { ...values, list: list._id, board: list.board },
+      }),
     })
       .then((res) => res.json())
       .then(({ card }) => {
@@ -42,6 +44,11 @@ export default function AddCard({ setShowAddCard, list, setList }) {
   return (
     <form
       onSubmit={handleSubmit}
+      onKeyDown={(e) => {
+        if (e.key === "Enter") {
+          handleSubmit();
+        }
+      }}
       className="bg-gray-300 w-full px-2 py-2 mr-2  z-5  mt-5  rounded-md"
     >
       <input
@@ -62,7 +69,7 @@ export default function AddCard({ setShowAddCard, list, setList }) {
         <span aria-hidden>×</span>
       </button>
       <button
-        type="submmit"
+        type="submit"
         className="bg-green-500 hover:bg-green-600 px-2 py-2 rounded-md mt-2"
       >
         Add Card

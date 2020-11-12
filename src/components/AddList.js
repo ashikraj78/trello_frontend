@@ -5,7 +5,7 @@ import { useFormik } from "formik";
 function validator(values) {
   const errors = {};
   if (!values.name) {
-    errors.email = "*Team name is required";
+    errors.name = "*Team name is required";
   }
   return errors;
 }
@@ -41,6 +41,11 @@ export default function AddList({ setShowAddList, board, setBoard }) {
   return (
     <form
       onSubmit={handleSubmit}
+      onKeyDown={(e) => {
+        if (e.key === "Enter") {
+          handleSubmit();
+        }
+      }}
       className="bg-gray-300 w-full px-2 py-2 mr-2  z-5  mt-5  rounded-md"
     >
       <input

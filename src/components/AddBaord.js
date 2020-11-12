@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { useFormik } from "formik";
+import { useContext } from "react";
+import BoardContext from "../components/BoardContext";
+import TeamContext from "./TeamContext";
 
 function validator(values) {
   const errors = {};
@@ -11,6 +14,8 @@ function validator(values) {
 }
 
 export default function AddBoard({ teams, close }) {
+  let context = useContext(BoardContext);
+  let contextTeam = useContext(TeamContext);
   const history = useHistory();
   const { handleSubmit, handleChange, values, errors } = useFormik({
     initialValues: {
@@ -54,6 +59,11 @@ export default function AddBoard({ teams, close }) {
   return (
     <form
       onSubmit={handleSubmit}
+      onKeyDown={(e) => {
+        if (e.key === "Enter") {
+          handleSubmit();
+        }
+      }}
       className="bg-gray-400 h-56 px-2 pr-10 py-2 rounded-md "
     >
       <input
@@ -73,8 +83,8 @@ export default function AddBoard({ teams, close }) {
         className="block mt-2 w-full py-1 rounded-md"
       >
         <option>select team name</option>
-        {teams &&
-          teams.map((team) => {
+        {contextTeam.teams &&
+          contextTeam.teams.map((team) => {
             return <option value={team._id}>{team.name}</option>;
           })}
       </select>

@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import UserContext from "../UserContext";
 
 export default function UserDropdown({ handleLogout }) {
+  let context = useContext(UserContext);
   return (
     <div
       className="py-1 rounded-md bg-white shadow-xs"
@@ -14,7 +16,7 @@ export default function UserDropdown({ handleLogout }) {
         className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
         role="menuitem"
       >
-        Your Profile
+        {context.user.name}
       </a>
       <a
         href="#"
@@ -27,7 +29,7 @@ export default function UserDropdown({ handleLogout }) {
         to="/"
         className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
         role="menuitem"
-        onClick={handleLogout}
+        onClick={() => context.setUser(null)}
       >
         Sign out
       </NavLink>

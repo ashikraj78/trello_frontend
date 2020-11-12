@@ -1,8 +1,8 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import useOnClickOutside from "../hooks/useOutsideClick";
 import UserDropdown from "./dropdown/UserDropdown";
-import CreateDropdown from "./dropdown/CreateDropdown ";
+import CreateDropdown from "./dropdown/CreateDropdown";
 
 export default function Header() {
   let [userDropdownActive, setUserDropdownActive] = useState(false);
