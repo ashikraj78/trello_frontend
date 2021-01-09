@@ -23,7 +23,7 @@ export default function AddCard({ setShowAddCard, list, setList }) {
     },
   });
   function handleClick() {
-    fetch(`/api/v1/cards`, {
+    fetch(`${process.env.REACT_APP_API_URL}/api/v1/cards`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

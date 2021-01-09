@@ -9,7 +9,7 @@ export default function ShowCard({ close, card }) {
         <span aria-hidden>×</span>
       </button>
       <section className="mb-6 flex">
-        <img src="/images/tray.svg" className="w-6 mr-2" alt="icon"></img>
+        <img src="./images/tray.svg" className="w-6 mr-2" alt="icon"></img>
         <p className="font-medium  text-2xl">{card.name}</p>
       </section>
       <div className="flex">
@@ -18,7 +18,7 @@ export default function ShowCard({ close, card }) {
             <form>
               <label className="block  flex mb-4">
                 <img
-                  src="/images/fourlines.svg"
+                  src="./images/fourlines.svg"
                   className="w-6 mr-2"
                   alt="icon"
                 ></img>
@@ -40,7 +40,7 @@ export default function ShowCard({ close, card }) {
             <form>
               <label className="block  flex mb-4">
                 <img
-                  src="/images/dotlines.svg"
+                  src="./images/dotlines.svg"
                   className="w-6 mr-2"
                   alt="icon"
                 ></img>
@@ -63,35 +63,35 @@ export default function ShowCard({ close, card }) {
         <div className="px-2 ">
           <h1>ADD TO CARD</h1>
           <div className="bg-gray-300 w-full px-2 py-2 rounded-md pr-24 mb-3 flex">
-            <img src="/images/user.svg" className="w-4 mr-2" alt="icon"></img>
+            <img src="./images/user.svg" className="w-4 mr-2" alt="icon"></img>
             <p>Members</p>
           </div>
           <div className="bg-gray-300 w-full px-2 py-2 rounded-md pr-24 mb-3 flex">
-            <img src="/images/tag.svg" className="w-4 mr-2" alt="icon"></img>
+            <img src="./images/tag.svg" className="w-4 mr-2" alt="icon"></img>
             <p>Labels</p>
           </div>
           <div className="bg-gray-300 w-full px-2 py-2 rounded-md pr-24 mb-3 flex">
             <img
-              src="/images/checklist.svg"
+              src="./images/checklist.svg"
               className="w-4 mr-2"
               alt="icon"
             ></img>
             <p>Checklist </p>
           </div>
           <div className="bg-gray-300 w-full px-2 py-2 rounded-md pr-24 mb-3 flex">
-            <img src="/images/clock.svg" className="w-4 mr-2" alt="icon"></img>
+            <img src="./images/clock.svg" className="w-4 mr-2" alt="icon"></img>
             <p>Due Date</p>
           </div>
           <div className="bg-gray-300 w-full px-2 py-2 rounded-md pr-24 mb-3 flex">
             <img
-              src="/images/attachment.svg"
+              src="./images/attachment.svg"
               className="w-4 mr-2"
               alt="icon"
             ></img>
             <p>Attachment</p>
           </div>
           <div className="bg-gray-300 w-full px-2 py-2 rounded-md pr-24 mb-3 flex">
-            <img src="/images/tray.svg" className="w-4 mr-2" alt="icon"></img>
+            <img src="./images/tray.svg" className="w-4 mr-2" alt="icon"></img>
             <p>Cover</p>
           </div>
         </div>

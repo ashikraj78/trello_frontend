@@ -23,7 +23,7 @@ export default function AddList({ setShowAddList, board, setBoard }) {
     },
   });
   function handleClick() {
-    fetch(`/api/v1/lists`, {
+    fetch(`${process.env.REACT_APP_API_URL}/api/v1/lists`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

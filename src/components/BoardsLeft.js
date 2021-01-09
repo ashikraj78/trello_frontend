@@ -13,21 +13,25 @@ export default function BoardsLeft({ teams }) {
         activeClassName="bg-gray-900"
         className="flex hover:bg-gray-300 py-1 px-2 opacity-20 rounded-md mt-2"
       >
-        <img src="/images/trello.svg" className="w-5 mr-1 " alt="icon"></img>
+        <img src="./images/trello.svg" className="w-5 mr-1 " alt="icon"></img>
         <p>Boards</p>
       </div>
       <div
         activeClassName="bg-gray-900"
         className="flex hover:bg-gray-300 py-1 px-2 opacity-20 rounded-md mt-2"
       >
-        <img src="/images/template.svg" className="w-5 mr-1 " alt="icon"></img>
+        <img src="./images/template.svg" className="w-5 mr-1 " alt="icon"></img>
         <p>Templates</p>
       </div>
       <div
         activeClassName="bg-gray-900"
         className="flex hover:bg-gray-300 py-1 px-2 opacity-20 rounded-md mt-2"
       >
-        <img src="/images/heartbeat.svg" className="w-5 mr-1 " alt="icon"></img>
+        <img
+          src="./images/heartbeat.svg"
+          className="w-5 mr-1 "
+          alt="icon"
+        ></img>
         <p>Home</p>
       </div>
       <div
@@ -59,7 +63,7 @@ export default function BoardsLeft({ teams }) {
                 className="flex hover:bg-gray-300 py-1 px-2 opacity-20 rounded-md mt-2"
               >
                 <img
-                  src="/images/users.svg"
+                  src="./images/users.svg"
                   className="w-5 mr-1 "
                   alt="icon"
                 ></img>

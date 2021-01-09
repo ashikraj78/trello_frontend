@@ -13,7 +13,7 @@ export default function Boards() {
   const context = useContext(TeamContext);
 
   useEffect(() => {
-    fetch("/api/v1/teams", {
+    fetch(process.env.REACT_APP_API_URL + "/api/v1/teams", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -42,7 +42,11 @@ export default function Boards() {
         {/* recently board */}
         <section className="mb-10">
           <div className="flex font-medium mb-5">
-            <img src="/images/clock.svg" className="w-5 mr-3 " alt="icon"></img>
+            <img
+              src="./images/clock.svg"
+              className="w-5 mr-3 "
+              alt="icon"
+            ></img>
             <p>Recently Viewed</p>
           </div>
           <div className="flex">
@@ -58,7 +62,7 @@ export default function Boards() {
         {/* personal board */}
         <section className="mb-10">
           <div className="flex font-medium mb-5">
-            <img src="/images/user.svg" className="w-5 mr-3 " alt="icon"></img>
+            <img src="./images/user.svg" className="w-5 mr-3 " alt="icon"></img>
             <p>Personal Boards</p>
           </div>
           <div className="flex">

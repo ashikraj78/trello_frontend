@@ -5,6 +5,8 @@ import App from "./App";
 import "./style/style.css";
 
 import * as serviceWorker from "./serviceWorker";
+console.log(process.env.NODE_ENV, "Node env");
+console.log(process.env.REACT_APP_API_URL, "url");
 
 ReactDOM.render(
   <React.StrictMode>

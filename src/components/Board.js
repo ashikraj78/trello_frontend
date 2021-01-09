@@ -39,7 +39,7 @@ export default function Board() {
     },
   });
   function handleClick() {
-    fetch(`/api/v1/boards/${params.id}`, {
+    fetch(`${process.env.REACT_APP_API_URL}/api/v1/boards/${params.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -54,7 +54,7 @@ export default function Board() {
   }
 
   useEffect(() => {
-    fetch(`/api/v1/boards/${params.id}`, {
+    fetch(`${process.env.REACT_APP_API_URL}/api/v1/boards/${params.id}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -68,7 +68,7 @@ export default function Board() {
   }, []);
 
   function handleDelete() {
-    fetch(`/api/v1/boards/${params.id}`, {
+    fetch(`${process.env.REACT_APP_API_URL}/api/v1/boards/${params.id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -127,7 +127,7 @@ export default function Board() {
             className="bg-gray-300 bg-opacity-15 px-2 py-2 rounded-md mr-2 flex  "
           >
             <img
-              src="/images/settings.svg"
+              src="./images/settings.svg"
               className="w-5 mr-1 "
               alt="icon"
             ></img>

@@ -33,7 +33,7 @@ function LogIn() {
     },
   });
   function handleClick() {
-    fetch("/api/v1/users/login", {
+    fetch(process.env.REACT_APP_API_URL + "/api/v1/users/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -50,7 +50,7 @@ function LogIn() {
   return (
     <div className=" flex justify-between items-center">
       <div className="mr-24 w-4/12 ">
-        <img src="/images/loginLeftbg.svg"></img>
+        <img src="./images/loginLeftbg.svg"></img>
       </div>
       <div className="min-h-screen w-6/12 bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
@@ -221,7 +221,7 @@ function LogIn() {
         </div>
       </div>
       <div className="ml-24 w-4/12 ">
-        <img src="/images/loginRightbg.svg"></img>
+        <img src="./images/loginRightbg.svg"></img>
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ export default function ListDropDown({
   setBoard,
 }) {
   function handleDelete() {
-    fetch(`/api/v1/lists/${list._id}`, {
+    fetch(`${process.env.REACT_APP_API_URL}/api/v1/lists/${list._id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

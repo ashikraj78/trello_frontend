@@ -27,7 +27,7 @@ export default function AddTeam({ close }) {
   });
 
   function handleClick() {
-    fetch("/api/v1/teams", {
+    fetch(process.env.REACT_APP_API_URL + "/api/v1/teams", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -129,7 +129,7 @@ export default function AddTeam({ close }) {
           </button>
         </form>
         <img
-          src="https://a.trellocdn.com/prgb/dist/images/organization/empty-board.286f8fc83e01c93ed27e.svg"
+          src="https://a.trellocdn.com/prgb/dist./images/organization/empty-board.286f8fc83e01c93ed27e.svg"
           className="w-full"
           alt="icon"
         ></img>

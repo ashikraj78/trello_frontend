@@ -36,7 +36,7 @@ function Signup(props) {
     },
   });
   function handleClick() {
-    fetch("/api/v1/users", {
+    fetch(process.env.REACT_APP_API_URL + "/api/v1/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -53,7 +53,7 @@ function Signup(props) {
   return (
     <div className=" flex justify-between items-center">
       <div className="mr-24 w-4/12 ">
-        <img src="/images/loginLeftbg.svg" alt="icon"></img>
+        <img src="./images/loginLeftbg.svg" alt="icon"></img>
       </div>
       <div className="min-h-screen w-6/12 bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
@@ -180,7 +180,7 @@ function Signup(props) {
                       className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md bg-white text-sm leading-5 font-medium text-gray-500 hover:text-gray-400 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition duration-150 ease-in-out"
                     >
                       <svg
-                        className="h-5 h-5"
+                        className="h-5"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >
@@ -201,7 +201,7 @@ function Signup(props) {
                       className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md bg-white text-sm leading-5 font-medium text-gray-500 hover:text-gray-400 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition duration-150 ease-in-out"
                     >
                       <svg
-                        className="h-5 h-5"
+                        className="h-5"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >
@@ -218,7 +218,7 @@ function Signup(props) {
                       className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md bg-white text-sm leading-5 font-medium text-gray-500 hover:text-gray-400 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition duration-150 ease-in-out"
                     >
                       <svg
-                        className="h-5 h-5"
+                        className="h-5"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >
@@ -243,7 +243,7 @@ function Signup(props) {
         </div>
       </div>
       <div className="ml-24 w-4/12 ">
-        <img src="/images/loginRightbg.svg" alt="icon"></img>
+        <img src="./images/loginRightbg.svg" alt="icon"></img>
       </div>
     </div>
   );

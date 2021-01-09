@@ -9,7 +9,7 @@ export default function List({ singleList, board, setBoard }) {
   const [listDropDown, setListDropDown] = useState(false);
 
   useEffect(() => {
-    fetch(`/api/v1/lists/${singleList._id}`, {
+    fetch(`${process.env.REACT_APP_API_URL}/api/v1/lists/${singleList._id}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -31,7 +31,7 @@ export default function List({ singleList, board, setBoard }) {
           {!listDropDown ? (
             <button onClick={() => setListDropDown((prevState) => !prevState)}>
               <img
-                src="/images/threedots.svg"
+                src="./images/threedots.svg"
                 className="w-5 mr-1 "
                 alt="icon"
               ></img>

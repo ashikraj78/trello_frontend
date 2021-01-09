@@ -20,7 +20,7 @@ export default function Card({ singleCard, list, setList }) {
           {!cardDropdown ? (
             <button onClick={() => setCardDorpdown((prevState) => !prevState)}>
               <img
-                src="/images/settings.svg"
+                src="./images/settings.svg"
                 className="w-5 mr-1 "
                 alt="icon"
               ></img>

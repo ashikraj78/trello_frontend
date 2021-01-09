@@ -12,7 +12,7 @@ export default function Team({ team, teams }) {
   let history = useHistory();
 
   function handleDelete() {
-    fetch(`/api/v1/teams/${team._id}`, {
+    fetch(`${process.env.REACT_APP_API_URL}/api/v1/teams/${team._id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -29,7 +29,7 @@ export default function Team({ team, teams }) {
     <li key={team._id} className="mb-10 list-none">
       <div className="flex justify-between items-center">
         <div className="flex font-medium mb-5">
-          <img src="/images/users.svg" className="w-5 mr-3 " alt="icon"></img>
+          <img src="./images/users.svg" className="w-5 mr-3 " alt="icon"></img>
           <p>{team.name}</p>
         </div>
 
@@ -40,7 +40,7 @@ export default function Team({ team, teams }) {
             className="flex bg-gray-300 hover:bg-gray-400 py-1 px-2 opacity-20 rounded-md ml-5 mt-2 mb-5"
           >
             <img
-              src="/images/trello.svg"
+              src="./images/trello.svg"
               className="w-5 mr-1 "
               alt="icon"
             ></img>
@@ -50,7 +50,7 @@ export default function Team({ team, teams }) {
             activeClassName="bg-gray-900"
             className="flex bg-gray-300 hover:bg-gray-400 py-1 px-2 opacity-20 rounded-md ml-5 mt-2 mb-5"
           >
-            <img src="/images/user.svg" className="w-5 mr-1 " alt="icon"></img>
+            <img src="./images/user.svg" className="w-5 mr-1 " alt="icon"></img>
             <p>Members(1)</p>
           </div>
           <button
@@ -59,7 +59,7 @@ export default function Team({ team, teams }) {
             className="flex bg-gray-300 hover:bg-gray-400 py-1 px-2 opacity-20 rounded-md ml-5 mt-2 mb-5"
           >
             <img
-              src="/images/settings.svg"
+              src="./images/settings.svg"
               className="w-5 mr-1 "
               alt="icon"
             ></img>
@@ -70,7 +70,7 @@ export default function Team({ team, teams }) {
             className="flex bg-gray-300 hover:bg-gray-400 py-1 px-2 opacity-20 rounded-md ml-5 mt-2 mb-5"
           >
             <img
-              src="/images/hand-bag.svg"
+              src="./images/hand-bag.svg"
               className="w-5 mr-1 "
               alt="icon"
             ></img>

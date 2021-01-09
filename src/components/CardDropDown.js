@@ -9,7 +9,7 @@ export default function CardDropDown({
   // console.log(singleCard);
 
   function handleDelete() {
-    fetch(`/api/v1/cards/${singleCard._id}`, {
+    fetch(`${process.env.REACT_APP_API_URL}/api/v1/cards/${singleCard._id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

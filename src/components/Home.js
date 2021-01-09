@@ -34,7 +34,7 @@ export default function Home() {
           <button
             type="submit"
             className="text-2xl font-thin ml-2 py-4 px-4 border
-        border-transparent text-sm leading-5 font-medium rounded-md text-white
+        border-transparent  leading-5 rounded-md text-white
         bg-green-600 hover:bg-green-500 
         transition duration-150 ease-in-out"
           >

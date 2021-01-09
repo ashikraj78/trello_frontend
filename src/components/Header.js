@@ -19,20 +19,24 @@ export default function Header() {
           <div className="flex-1 flex items-center justify-between">
             <div className=" flex items-center">
               <NavLink className="bg-blue-300 py-2 px-2 rounded-md" to="/">
-                <img src="/images/menu.svg" className="w-5" alt="icon"></img>
+                <img src="./images/menu.svg" className="w-5" alt="icon"></img>
               </NavLink>
               <NavLink
                 className="ml-1 bg-blue-300 py-2 px-2 rounded-md"
                 to="/boards"
               >
-                <img src="/images/home.svg" className="w-5" alt="home"></img>
+                <img src="./images/home.svg" className="w-5" alt="home"></img>
               </NavLink>
 
               <NavLink
                 className="bg-blue-300 py-1 px-2 rounded-md ml-1 flex"
                 to="/boards"
               >
-                <img src="/images/trello.svg" className="w-5" alt="board"></img>
+                <img
+                  src="./images/trello.svg"
+                  className="w-5"
+                  alt="board"
+                ></img>
                 <p className="text-white ml-1 font-medium font-2xl">Boards</p>
               </NavLink>
 
@@ -75,7 +79,7 @@ export default function Header() {
                     }
                   >
                     <img
-                      src="/images/plus.svg"
+                      src="./images/plus.svg"
                       className="w-5"
                       alt="icon"
                     ></img>
@@ -96,7 +100,7 @@ export default function Header() {
                   className="ml-1 px-2 py-2 bg-blue-500 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
                 >
                   <img
-                    src="/images/information.svg"
+                    src="./images/information.svg"
                     className="w-5"
                     alt="icon"
                   ></img>
@@ -107,7 +111,7 @@ export default function Header() {
                   className="ml-1 px-2 py-2 bg-blue-500 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
                 >
                   <img
-                    src="/images/notification.svg"
+                    src="./images/notification.svg"
                     className="w-5"
                     alt="icon"
                   ></img>
@@ -128,7 +132,7 @@ export default function Header() {
                       >
                         <img
                           className="h-8 w-8 rounded-full"
-                          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                          src="https:/./images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                           alt=""
                         />
                       </button>

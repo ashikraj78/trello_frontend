@@ -58,7 +58,7 @@ function App() {
 
   useEffect(() => {
     // getting user
-    fetch("/api/v1/users/me")
+    fetch(process.env.REACT_APP_API_URL + "/api/v1/users/me")
       .then((res) => res.json())
       .then(({ user }) => {
         setUser(user);
@@ -66,7 +66,7 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/trello_frontend">
       <UserContext.Provider value={{ user, setUser }}>
         <TeamContext.Provider value={{ teams, setTeams }}>
           <BoardContext.Provider value={{ boards, setBoards }}>

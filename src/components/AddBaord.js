@@ -39,7 +39,7 @@ export default function AddBoard({ teams, close }) {
   }, []);
 
   function handleClick() {
-    fetch("/api/v1/boards", {
+    fetch(process.env.REACT_APP_API_URL + "/api/v1/boards", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
