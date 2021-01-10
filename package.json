@@ -21,7 +21,7 @@
     "deploy": "gh-pages -d build",
     "build:prod": "env-cmd -f .env.prod npm run build",
     "prestart": "tailwind build ./src/style/tailwind.css -c ./tailwind.config.js -o ./src/style/style.css",
-    "start": "env-cmd -f .env.prod react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
