@@ -5,7 +5,8 @@ import CreateBoard from "./CreateBoard";
 import Team from "./Team";
 import TeamContext from "./TeamContext";
 import { useContext } from "react";
-
+import Dialog from "@reach/dialog";
+import AddTeam from "./AddTeam";
 export default function Boards() {
   const [showDialog, setShowDialog] = useState(false);
   const open = () => setShowDialog(true);
@@ -41,7 +42,7 @@ export default function Boards() {
 
       <main className="w-10/12 mr-24">
         {/* recently board */}
-        <section className="mb-10">
+        {/* <section className="mb-10">
           <div className="flex font-medium mb-5">
             <img
               src="./images/clock.svg"
@@ -58,7 +59,7 @@ export default function Boards() {
               <p>what to do in the detail coding</p>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* personal board */}
         <section className="mb-10">
@@ -71,9 +72,16 @@ export default function Boards() {
               onClick={open}
               className="bg-gray-300 w-48 h-24 rounded-md px-2 py-2  flex items-center justify-center text-black mr-5 hover:bg-gray-400"
             >
-              create new board
+              create team
             </button>
-            <CreateBoard />
+            {/* <CreateBoard /> */}
+            <Dialog
+              isOpen={showDialog}
+              onDismiss={close}
+              className="team_modal"
+            >
+              <AddTeam close={close} />
+            </Dialog>
           </div>
         </section>
 
