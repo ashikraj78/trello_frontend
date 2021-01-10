@@ -28,6 +28,7 @@ export default function AddList({ setShowAddList, board, setBoard }) {
       headers: {
         "Content-Type": "application/json",
         credentials: "include",
+        token: localStorage.getItem("token"),
       },
       body: JSON.stringify({ list: { ...values, board: board._id } }),
     })

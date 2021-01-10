@@ -14,6 +14,7 @@ export default function List({ singleList, board, setBoard }) {
       headers: {
         "Content-Type": "application/json",
         credentials: "include",
+        token: localStorage.getItem("token"),
       },
     })
       .then((res) => res.json())

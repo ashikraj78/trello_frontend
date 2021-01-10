@@ -44,6 +44,7 @@ export default function AddBoard({ teams, close }) {
       headers: {
         "Content-Type": "application/json",
         credentials: "include",
+        token: localStorage.getItem("token"),
       },
       body: JSON.stringify({ board: values }),
     })

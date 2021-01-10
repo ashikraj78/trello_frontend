@@ -54,11 +54,15 @@ function App() {
   let [user, setUser] = useState(null);
   let [teams, setTeams] = useState(null);
   let [boards, setBoards] = useState(null);
-  console.log(boards, "this is the boards");
 
   useEffect(() => {
     // getting user
-    fetch(process.env.REACT_APP_API_URL + "/api/v1/users/me")
+    fetch(process.env.REACT_APP_API_URL + "/api/v1/users/me", {
+      method: "GET",
+      headers: {
+        token: localStorage.getItem("token"),
+      },
+    })
       .then((res) => res.json())
       .then(({ user }) => {
         setUser(user);

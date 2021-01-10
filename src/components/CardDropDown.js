@@ -14,6 +14,7 @@ export default function CardDropDown({
       headers: {
         "Content-Type": "application/json",
         credentials: "include",
+        token: localStorage.getItem("token"),
       },
     })
       .then((res) => res.json())

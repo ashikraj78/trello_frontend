@@ -32,6 +32,7 @@ export default function AddTeam({ close }) {
       headers: {
         "Content-Type": "application/json",
         credentials: "include",
+        token: localStorage.getItem("token"),
       },
       body: JSON.stringify({ team: values }),
     })

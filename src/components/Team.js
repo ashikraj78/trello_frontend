@@ -17,6 +17,7 @@ export default function Team({ team, teams }) {
       headers: {
         "Content-Type": "application/json",
         credentials: "include",
+        token: localStorage.getItem("token"),
       },
     })
       .then((res) => res.json())

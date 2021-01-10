@@ -28,6 +28,7 @@ export default function AddCard({ setShowAddCard, list, setList }) {
       headers: {
         "Content-Type": "application/json",
         credentials: "include",
+        token: localStorage.getItem("token"),
       },
       // body: JSON.stringify({ card: values }),
       body: JSON.stringify({
