@@ -42,7 +42,6 @@ function LogIn() {
     })
       .then((res) => res.json())
       .then((user) => {
-        console.log(user.token);
         context.setUser(user);
         window.localStorage.setItem("token", user.token);
         return history.push("/boards");
