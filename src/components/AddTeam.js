@@ -64,7 +64,7 @@ export default function AddTeam({ close }) {
           <div className="mt-5 mb-2">
             <label
               htmlFor="name"
-              className="block text-sm font-medium leading-5 text-xl mb-2  text-gray-700"
+              className="block text-sm font-medium leading-5 mb-2  text-gray-700"
             >
               Team Name
             </label>
@@ -106,7 +106,7 @@ export default function AddTeam({ close }) {
           <div className="mt-5 mb-2">
             <label
               htmlFor="name"
-              className="block text-sm font-medium leading-5 text-xl mb-2 text-gray-700"
+              className="block text-sm font-medium leading-5  mb-2 text-gray-700"
             >
               Team Description
             </label>
