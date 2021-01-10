@@ -85,7 +85,7 @@ export default function AddTeam({ close }) {
           <div className="mt-5 mb-2">
             <label
               htmlFor="type"
-              className="block text-sm font-medium leading-5 text-xl mb-2 text-gray-700"
+              className="block text-sm font-medium leading-5  mb-2 text-gray-700"
             >
               Team Type
             </label>
@@ -130,7 +130,7 @@ export default function AddTeam({ close }) {
           </button>
         </form>
         <img
-          src="https://a.trellocdn.com/prgb/dist./images/organization/empty-board.286f8fc83e01c93ed27e.svg"
+          src="https://a.trellocdn.com/prgb/dist/images/organization/empty-board.286f8fc83e01c93ed27e.svg"
           className="w-full"
           alt="icon"
         ></img>
